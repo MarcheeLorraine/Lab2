@@ -1,4 +1,4 @@
-import statistics
+
 
 def display_main_menu():
     print("Enter some numbers SEPARATED by commas eg(5, 67, 69)")
@@ -24,5 +24,9 @@ def sort_temperature(floatnumbers):
     print(sorted(floatnumbers))
 
 def calc_median_temperature(floatnumbers):
-    median = statistics.median(floatnumbers)
+    sortnumbers = sorted(floatnumbers)
+    middle = len(sortnumbers) // 2
+    if len(sortednumbers) % 2 == 0:
+        median = (sortnumbers[middle - 1] + sortnumbers[middle]) / 2
+    else: median = sortnumbers[middle]
     print(median)
